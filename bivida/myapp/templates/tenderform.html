@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>BIVIDA - An Open Data Platform for Tenders</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+      {% load static %}
+     <link rel="stylesheet" href="{% static 'myapp/style2.css' %}">
+
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+        <link rel="stylesheet" href="{% static 'myapp/style2.css' %}">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+        {% load staticfiles %}
+		<script src="{% static 'myapp/jquery.min.js' %}"></script>
+		<script src="{% static 'myapp/skel.min.js' %}"></script>
+		<script src="{% static 'myapp/skel-layers.min.js' %}"></script>
+		<script src="{% static 'myapp/init.js' %}"></script>
+		<noscript>
+			<link rel="stylesheet" href="{% static 'myapp/skel.css' %}" />
+			<link rel="stylesheet" href="{% static 'myapp/style1.css' %}" />
+			<link rel="stylesheet" href="{% static 'myapp/style-xlarge.css' %}" />
+		</noscript>
+
+  </head>
+  <scripts>
+<style>
+    header {
+		background-color:#0064c3;
+		color: #ffffff;
+		cursor: default;
+		font-size: 1.1em;
+		height: 6em;
+		line-height: 6em;
+		width: 100%;
+		z-index: 10000;
+	}
+    #header h1 {
+            text-align: left;
+			color: #ffffff;
+			height: inherit;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+            font-size:3.0em;
+			position: absolute;
+		}
+
+			#header h1 a {
+				font-size: 1em;
+                margin:5px;
+                color: #ffffff;
+			}
+
+
+</style>
+  <body>
+  <header id="header">
+      <h1><a href="index.html">BIVIDA</a></h1>
+
+  </header>
+
+    <div class="container">
+  <form role="form" action="index.html" method="POST">{% csrf_token %}
+    <div class="row">
+      <div id="cust-group" class="panel-group">
+        <fieldset class="panel panel-default">
+          <p class="panel-heading">
+            <a data-toggle="collapse" data-parent="#cust-group" href="#cust-first">Personal Information</a>
+          </p>
+          <div id="cust-first" >
+            <div class="panel-body">
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    First Name
+                  </label>
+                  <input id="first_name" type="text" name="first_name" value={{ first_name }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Last Name
+                  </label>
+                  <input id="last_name" type="text" name="last_name" value={{ last_name }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Phone No.
+                  </label>
+                  <input id="phone" type="tel" name="phone" value={{ phone }}>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Date of Birth
+                  </label>
+                  <input id="date_of_birth" type="date" name="date_of_birth" value={{ date_of_birth }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Gender
+                  </label>
+                  <input id="gender" type="text" name="gender" value={{ gender }}>
+                    <option>....</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </input>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Email
+                  </label>
+                  <input id="email" type="text" name="email" value={{ email }}>
+                </div>
+				<div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Address
+                  </label>
+                  <input id="address" type="text" name="address" value={{ address }}>
+                </div>
+				<div class="form-group col-sm-4">
+                  <label class="form-label">
+                    City
+                  </label>
+                  <input id="city" type="text" name="city" value={{ city }}>
+                </div>
+				<div class="form-group col-sm-4">
+                  <label class="form-label">
+                    State
+                  </label>
+                  <input id="state" type="text" name="state" value={{ state }}>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="panel panel-default">
+          <p class="panel-heading"><a data-toggle="collapse" data-parent="#cust-group" href="#cust-second">Company Information</a>
+          </p>
+          <div id="cust-second">
+            <div class="panel-body">
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Company Name
+                  </label>
+                  <input id="company-nz" type="text" name="email" value={{ email }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Company Registration No.
+                  </label>
+                  <input id="company_registration_no" type="text" name="company_registration_no" value={{ company_registraton_no }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Status Of Applicant
+                  </label>
+                  <input id="status_of_applicant" type="text" name="status_of_applicant" value={{ status_of_applicant }}>
+                    <option>....</option>
+                    <option>Individual</option>
+                    <option>Private Ltd. Comp.</option>
+					<option>Public Ltd. Comp.</option>
+					<option>Partnership Firm</option>
+					<option>Government Undertaking</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Nature Of Organization
+                  </label>
+                  <input id="nature_of_organization" type="text" name="nature_of_organization" value={{ nature_of_organization }}>
+                    <option>....</option>
+                    <option>Small Scale Industry</option>
+                    <option>Med & Large Scale Unit</option>
+					<option>Trader-Dosmetic</option>
+					<option>Mine/Quarry Owner</option>
+                  </select>
+                </div>
+				<div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Nature Of Business
+                  </label>
+                  <input id="nature_of_business" type="text" name="nature_of_business" value={{ nature_of_business }}>
+                    <option>....</option>
+                    <option>Manufacturing</option>
+                    <option>Mining</option>
+					<option>Trading</option>
+					<option>Others</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Experience
+                  </label>
+                  <input id="experience" type="text" name="experience" value={{ experience}}>
+                </div>
+              </div>
+
+			  </div>
+			 </div>
+			</fieldset>
+
+
+           <fieldset class="panel panel-default">
+            <p class="panel-heading"><a data-toggle="collapse" data-parent="#cust-group" href="#cust-third">Other Information</a>
+          </p>
+          <div id="cust-third">
+            <div class="panel-body">
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    PAN No.
+                  </label>
+                  <input id="pan_no" type="text" name="pan_no" value={{ pan_no }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    TIN No.
+                  </label>
+                  <input id="tin_no" type="text" name="tin_no" value={{ tin_no }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Aadhar No.
+                  </label>
+                  <input id="aadhar_no" type="text" name="aadhar_no" value={{ aadhar_no }}>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Turnover(in Crores)
+                  </label>
+                  <input id="turnover" type="text" name="turnover" value={{ turnover }}>
+                </div>
+				<div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Net Worth In Last 3Yrs
+                  </label>
+                  <input id="net_worth" type="text" name="net_worth" value={{ net_worth }}>
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="form-label">
+                    Description
+                  </label>
+                  <input id="description" type="text" name="description" value={{ description }}>
+                </div>
+
+			</div>
+           <div class="btn-group pull-right">
+                <button type="submit">Send</button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+        {% load staticfiles %}
+        <script src="{% static 'myapp/index2.js' %}"></script>
+
+    <script src="{% static 'myapp/index2.js' %}"></script>
+
+  </body>
+</html>

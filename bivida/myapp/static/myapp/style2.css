@@ -1,0 +1,18 @@
+.container {
+  margin-top: 30px;
+}
+
+fieldset .panel-heading {
+  margin: 0;
+}
+
+
+.wizard .content {
+    min-height: 100px !important;
+}
+.wizard .content > .body {
+    width: 100% !important; !important; !important; !important;
+    height: auto !important; !important; !important;
+    padding: 15px !important; !important;
+    position: relative !important;
+}

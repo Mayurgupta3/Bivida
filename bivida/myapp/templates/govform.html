@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html >
+  <head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>BIVIDA - An Open Data Platform for Tenders</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="http://formvalidation.io/vendor/formvalidation/js/formValidation.min.js"></script>
+<script src="http://formvalidation.io/vendor/formvalidation/js/framework/bootstrap.min.js"></script>
+<script src="http://formvalidation.io/vendor/jquery.steps/js/jquery.steps.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="http://formvalidation.io/vendor/jquery.steps/css/jquery.steps.css" rel="stylesheet"/>
+<link href="http://formvalidation.io/vendor/formvalidation/css/formValidation.min.css" rel="stylesheet"/>
+
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'myapp\style2.css' %}">
+
+
+
+
+
+  </head>
+
+  <body>
+
+    <div class="container">
+	<div class="row">
+    	<div class="col-xs-12">
+ 	<h3>       &nbsp;&nbsp;Admin Panel</h3>
+
+<!--Form-->
+<form id="profileForm" method="post" class="form-horizontal">
+
+
+    <h2>Rules & Instruction</h2>
+    <section data-step="0">
+
+    	<div class="form-group">
+        	<pre><font size="6"><center><b>Instructions to Tenders</b></center></font>
+<font size="4"><b>Completion of Tender</b></font>
+<font size="3">All information should clearly state the tender’s name, the tender reference number and the section and details to which <br> the response relates.</font>
+
+<font size="4"><b>Form of Tender</b></font> - <font size="3">Complete and Return.</font><br>
+<font size="3"><b>Tenderer’s Submission</b></font> - <font size="3">Complete by inserting all of the detail requested. Your answers should relate only to the Tender <br> and method of recompense set out in the Specification below and in Part- Contract Documents.
+     Basic Details - Other information required by the Institution
+     Work Item Details - Alternative Proposals (where permitted)
+     Critical Dates  - Qualification of the Contract
+You are not required to submit any other details.</font><br>
+<font size="4"><b>Basic Details</b></font>
+<font size="3">Section I of this Appendix forms part of the offer made in the Form of Tender.
+Section II is for additional information not supplied elsewhere:
+      (i) Provide information of your latest 2-years published accounts or for the period that is available if trading <br> for less than 2 years.
+      (ii) If you wish, supply any other information you feel might legitimately support your tender.
+Note: You should carefully read the following terms & condition.</font><br>
+<font size="4"><b>Work Item Details</b></font>
+<font size="3">Include under this Appendix any alternative proposals you wish to submit for consideration, Qualification of the Contract.</font><br>
+<font size="4"><b>Critical Dates</b></font> -
+<font size="3">Include here details of any areas where you will not be able to comply with the contract as set out in this Invitation <br> to Tender. Qualifications should only <br> be made if you cannot comply with the requirements of the contract on time.</font>
+</pre>
+        </div>
+
+    </section>
+
+    <h2>Basic Details</h2>
+    <section data-step="1">
+    	<div class="form-group">
+        	<label class="col-xs-3 control-label">Tender Reference No.</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="tr" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Tender Type:</label>
+			<div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>Open</option>
+                    <option>Limited</option>
+					<option>EOI</option>
+					<option>Auction</option>
+					<option>Single</option>
+                  </select>
+       </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Form Of Contract:</label>
+			<div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>Work Contract</option>
+                    <option>Auction</option>
+					<option>Service Contract</option>
+					<option>Buy</option>
+					<option>Empanelment</option>
+					<option>Sell</option>
+					<option>Buy & Service</option>
+                  </select>
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Tender Category:</label>
+            <div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>Goods</option>
+                    <option>Works</option>
+					<option>Services</option>
+                  </select>
+            </div>
+        </div>
+    </section>
+
+    <h2>Work Item Details</h2>
+    <section data-step="2">
+    	<div class="form-group">
+        	<label class="col-xs-3 control-label">Work Item Title:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="work" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Work Description:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="workd" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Pre Qual. Details:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="pre" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Product Category:</label>
+            <div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>Civil Works</option>
+                    <option>Electrical Works</option>
+					<option>Fleet Management</option>
+					<option>Computer Systems</option>
+                  </select>
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Product Sub category:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="product" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Contract Type:</label>
+            <div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>Tender</option>
+                    <option>Empanelment</option>
+                  </select>
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Bid Validity Days:</label>
+            <div class="col-xs-9">
+			<select type="text" class="form-control">
+                    <option>....</option>
+                    <option>120</option>
+                    <option>90</option>
+					<option>60</option>
+                    <option>30</option>
+                  </select>
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Completion Period In Months:</label>
+            <div class="col-xs-9">
+                <input type="Number" class="form-control" name="completion" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Location(works/items):</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="loc" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Pincode:</label>
+            <div class="col-xs-9">
+                <input type="text" class="form-control" name="pin" />
+            </div>
+        </div>
+	</section>
+
+	<h2>Critical Dates</h2>
+    <section data-step="3">
+	<div class="form-group">
+        	<label class="col-xs-3 control-label">Publishing Date:</label>
+            <div class="col-xs-9">
+                <input type="date" class="form-control" name="pub" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Document Sale Start Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="sale" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Document Sale End Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="end" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Seek Clarification Start Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="seek" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Seek Clarification End Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="seek1" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Pre Bid Meeting Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="bid" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Bid Submission Start Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="bid1" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Bid Submission End Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="bid2" />
+            </div>
+        </div>
+		<div class="form-group">
+        	<label class="col-xs-3 control-label">Bid Opening Date:</label>
+            <div class="col-xs-9">
+                <input type="datetime-local" class="form-control" name="bid3" />
+            </div>
+        </div>
+    </section>
+
+
+
+
+</form>
+
+
+
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="welcomeModal">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sucessfully Completed</h4>
+      </div>
+      <div class="modal-body">
+        <p>Your Form Has Been Added To Tender List</p>
+      </div>
+      <div class="modal-footer">
+	  <form action="GovernmentForm.php">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button></form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+        <script src="{% static 'myapp\index2.js' %}"></script>
+
+
+
+  </body>
+</html>
