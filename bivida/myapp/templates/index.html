@@ -3,46 +3,45 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>BIVIDA - An Open Data Platform for Tenders</title>
-        {% load static %}
-
-		<link rel="stylesheet" href="{% static 'myapp/style1.css' %}" />
+		<link rel="stylesheet" href="css1/style1.css">
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-        <link rel="stylesheet" href="{% static 'myapp/style.css' %}" />
-		{% load staticfiles %}
-		<nonscripts>
-		<script src="{% static 'myapp/jquery.min.js' %}"></script>
-		<script src="{% static 'myapp/skel.min.js' %}"></script>
-		<script src="{% static 'myapp/skel-layers.min.js' %}"></script>
-		<script src="{% static 'myapp/init.js' %}"></script>
-		</nonscripts>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
 	</head>
 	<body class="landing">
 	<div class='particle-network-animation'>
 </div>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        {% load static %}
-        <script src="{% static 'myapp/index.js' %}"/></script>
+
+        <script src="js1/index1.js"></script>
 			<header id="header">
-				<h1><a>BIVIDA</a></h1>
+				<h1><a href="index.php"><img src = "./images/bivida_logo.jpg"  style="margin: 20px 0px" width="100%" height="85%"></a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="tender.html">Tender</a></li>
-						<li><a href="update.html">Updates</a></li>
-						<li><a href="adminlogin.html" target="_blank">Admin Login</a></li>
-						<li><a href="signup.html" class="button special" target="_blank">Sign In</a></li>
+						<li><a href="index.php">Home</a></li>
+						<li><a href="tender.php">About Us</a></li>
+						<li><a href="updates.php">Pricing</a></li>
+						<li><a href="log.php" target="_blank">Admin Login</a></li>
+						<li><a href="login.php" class="button special" target="_blank">Log In</a></li>
 					</ul>
 				</nav>
-				<section id="banner">
+				<section id="banner" style="margin: 40px 0px">
 				<h2>BIVIDA</h2>
 				<p><font color = "white">An Open Data Platform for Tenders.</font></p>
 
 			</section>
-
+				
 			</header>
 			<section id="one" class="wrapper style1 special">
 				<div class="container">
@@ -53,21 +52,21 @@
 					<div class="row 150%">
 						<div class="4u 12u$(medium)">
 							<section class="box">
-								<img src="{% static 'images/secureplat.png' %}" width="150" height="150">
+								<img src="images/secureplat.png" width="150" height="150">
 								<h3>SECURE PLATFORM</h3>
 								<p>Bivida uses Double Hashing Algorithms making the system completely immune to hacking.</p>
 							</section>
 						</div>
 						<div class="4u 12u$(medium)">
 							<section class="box">
-								<img src="{% static 'images/node1.png' %}" width="150" height="150">
+								<img src="images/node1.png" width="150" height="150">
 								<h3>DECENTRALISED</h3>
 								<p>Our system is decentralized and all data on its cloud server preventing manipulation.</p>
 							</section>
 						</div>
 						<div class="4u$ 12u$(medium)">
 							<section class="box">
-								<img src="{% static 'images/sear.png' %}" width="150" height="150">
+								<img src="images/sear.png" width="150" height="150">
 								<h3>TRANSPARENCY</h3>
 								<p>All the applications are visible publicly allowing anyone to verify the honesty of System.</p>
 							</section>
@@ -80,53 +79,22 @@
 					<header class="major">
 						<h2><font color="white">How Its Works?</h2>
 						<p>This system makes the use of Blockchain Technology by keeping the records and data on its decentralized cloud server which is a secure platform.</font/></p>
-						<img src= "{% static "images/qw.jpg" %}" width="100%" height="auto" >
+						<img src= "images/qw.jpg" width="100%" height="100%" >
 					</header>
 						</div>
 					</section>
 					<footer>
 					<header class="major">
 						<h2>
-						<br>
-						<br>Apply Here
-						<br>
-						<br>
+						<br>Pricing
 						</h2>
-						<section>
-						<form method="post" action="#">
-
-						<p><b>Choose category </b></p>
-						<section>
-
-						<div class="12u$">
-						<form method="post" action="#">
-								<div class="row uniform 50%">
-								<div class="12u$">
-										<div class="select-wrapper">
-											<select name="category" id="category">
-												<option value="">- Category -</option>
-												<option value="1">Infrastructure</option>
-												<option value="1">Transportation</option>
-												<option value="1">Industry</option>
-												<option value="1">Real Estate</option>
-												<option value="1">Constrution</option>
-												<option value="1">Consultancy</option>
-											</select>
-										</div>
-									</div>
-									</section>
+						<img src="./images/pricing.jpg" width="80%" height="100%">
 									<br>
 									<br>
 									</div>
-</form>
-					</section>
-						<ul class="actions">
-							<li><align="center">
-								<a href="tender.html" class="button big">Apply Here!</a>
-							</li>
-						</ul>
+
 					</header>
-
+					
 					</footer>
 				</div>
 			</section>
@@ -134,7 +102,7 @@
 				<div class="container">
 					<header class="major">
 						<h2>Contact Us</h2>
-
+						
 					</header>
 				</div>
 				<div class="container 50%">
@@ -159,19 +127,19 @@
 				</div>
 			</section>
 
-
+		
 			<footer id="footer">
 				<div class="container">
 					<section class="links">
 						<div class="row">
-
+							
 						</div>
 					</section>
 					<div class="row">
 						<div class="8u 12u$(medium)">
 							<ul class="copyright">
-								<li>&copy;  All rights reserved by BIVIDA 2017.</li>
-
+								<li>&copy;  All rights reserved by BIVIDA 2018.</li>
+								
 							</ul>
 						</div>
 						<div class="4u$ 12u$(medium)">
